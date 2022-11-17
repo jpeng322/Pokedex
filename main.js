@@ -9,21 +9,6 @@ function firstUpperCase(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
-async function fetchAllPokemon() {
-  try {
-    const allPokemonData = await axios.get("https://pokeapi.co/api/v2/pokemon")
-    if (allPokemonData.status == 200) {
-      console.log(allPokemonData)
-      return allPokemonData.data
-    } else {
-      return null
-    }
-  } catch (error) {
-    console.log("something went wrongasdasdsa");
-    console.log(error)
-  }
-}
-
 // async function fetchAllPokemon() {
 //   try {
 //     const allPokemonData = await axios.get("https://pokeapi.co/api/v2/pokemon/?offset=340&limit=20")
@@ -69,15 +54,13 @@ async function searchPokemon() {
 
   const pokePic = document.createElement("img")
   imageContainer.append(pokePic);
-  console.log(imageContainer)
+
   // pokePic.src = fetchPokemon("bulbasaur").sprites.front_default
   pokeSearchBtn.addEventListener("click", async () => {
     const pokeData = await fetchPokemon(pokeSearchBar.value);
-    // console.log(pokeData.sprites.front_default)
     pokemonName.textContent = firstUpperCase(pokeSearchBar.value);
     pokePic.src = pokeData.sprites.front_default;
     pokeSearchBar.value = "";
-    console.log(pokeData.abilities)
   })
 
 
@@ -85,14 +68,10 @@ async function searchPokemon() {
 
 
     if (e.key === "Enter") {
-      console.log("entered")
       const pokeData = await fetchPokemon(pokeSearchBar.value);
-      // console.log(pokeData.sprites.front_default)
       pokemonName.textContent = firstUpperCase(pokeSearchBar.value);
-      console.log(typeof(pokeSearchBar.value))
       pokePic.src = pokeData.sprites.front_default
       pokeSearchBar.value = "";
-      console.log(pokeData.abilities);
       const pokeAbilities = pokeData.abilities;
 
       //adds abilities
@@ -158,3 +137,74 @@ async function searchPokemon() {
 
 searchPokemon()
 fetchPokemon("bulbasaur")
+
+const basicSpritesArray = ["back_default", "back_shiny", "front_default", "front_shiny"]
+const otherSpritesArray = ["dream_world", "home", "official-artwork"]
+
+async function makeOtherSpritesArray() {
+  const pokeData = await fetchPokemon(pokemonName.textContent.toLowerCase())
+  const pokeImg = document.querySelector("img")
+  console.log(pokeData.sprites.other)
+  const otherSprites = pokeData.sprites.other
+  pokeImg.src = otherSprites[otherSpritesArray[counter2]].front_default
+  }
+
+let counter = 0;
+let counter2 =0;
+
+async function changeImg() {
+  const pokeData = await fetchPokemon(pokemonName.textContent.toLowerCase())
+  const pokeImg = document.querySelector("img")
+  // console.log(pokeData)
+  pokeImg.src = pokeData.sprites[basicSpritesArray[counter]]
+
+}
+
+
+const topBtn = document.querySelector(".top-btn");
+
+const botBtn = document.querySelector(".bot-btn");
+
+const leftBtn = document.querySelector(".left-btn");
+
+const rightBtn = document.querySelector(".right-btn");
+
+const pokemonName = document.querySelector(".pokemonName")
+topBtn.addEventListener("click", () => {
+  // const pokeData = await fetchPokemon(pokemonName.textContent.toLowerCase())
+  changeImg()
+  counter += 1;
+  if (counter === 4) {
+    counter = 0
+  }
+})
+
+
+botBtn.addEventListener("click", () => {
+  changeImg()
+  counter -= 1;
+  if (counter === -1) {
+    counter = 3
+  }
+})
+
+leftBtn.addEventListener("click", async () => {
+  makeOtherSpritesArray()
+  counter2 -= 1;
+  if (counter2 === -1) {
+    counter2 = 2
+  }
+})
+
+rightBtn.addEventListener("click", () => {
+  makeOtherSpritesArray()
+  counter2 += 1;
+  if (counter2 === 3) {
+    counter2 = 0
+  }
+})
+
+
+
+// const imageContainer = document.querySelector(".imageContainer");
+// imageContainer.append(pokePic);

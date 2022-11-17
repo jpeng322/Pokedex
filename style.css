@@ -1,7 +1,13 @@
+@font-face {
+  font-family: pokemonFont;
+  src: url(pocket-monk-font/PocketMonk-15ze.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -19,6 +25,7 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
+  border-radius: 1.5rem;
 
 }
 
@@ -38,6 +45,8 @@ body {
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  border-radius: 1.5rem;
+  padding: 1rem;
 }
 
 .displayContainer>* {
@@ -48,10 +57,13 @@ body {
 .pokemonName {
   /* border: 1px solid red; */
   /* margin-top: 1rem; */
+  font-family: pokemonFont, sans-serif;
   font-size: 2rem;
 }
 
 .statsContainer {
+  /* border: 1px solid red; */
+  gap: .5rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -59,7 +71,7 @@ body {
 }
 
 .statsContainer>* {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   flex-grow: 1;
 
 }
@@ -82,13 +94,53 @@ body {
   grid-row: 10/11
 }
 
-.imageContainer img {
-  /* border: 1px solid red; */
-  height: 150px;
-  width: 150px;
+.top-btn {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  grid-column: 9/10;
+  grid-row: 10/11
 }
 
-.ability-section,.physical-section,.types-section {
+.bot-btn {
+  position: relative;
+  margin-top: 40px;
+  width: 20px;
+  height: 20px;
+  grid-column: 9/10;
+  grid-row: 10/11
+}
+
+.left-btn {
+  position: relative;
+  right:20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 20px;
+  /* margin-right: 40px; */
+  grid-column: 9/10;
+  grid-row: 10/11
+}
+
+.right-btn {
+  position: relative;
+  left: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  grid-column: 9/10;
+  grid-row: 10/11
+}
+
+.imageContainer img {
+  /* border: 1px solid red; */
+  height: 120px;
+  width: 120px;
+}
+
+.ability-section,
+.physical-section,
+.types-section {
   display: flex;
 }
 
@@ -104,12 +156,12 @@ body {
   text-align: center;
 }
 
-.types-section >*{
+.types-section>* {
   border: 1px solid black;
   flex: auto;
   text-align: center;
 }
 
 .hide {
-  display:none
+  display: none
 }
