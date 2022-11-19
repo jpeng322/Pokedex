@@ -7,16 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <title>Pokedex</title>
 </head>
 
 <body>
+  
   <div class="container">
-    <div class="displayContainer">
-      <div class="hide pokemonName">Pokemon Name</div>
-      <div class="hide imageContainer"></div>
+<!-- <class class="anotherContainer"></class> -->
+    <!-- big-blue and gray circle -->
+    <svg id="top-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
+    </svg></i>
+
+
+
+
+    <div class="poketitle">Pokedex</div>
+    <div class="default displayContainer">
+      <div class="image-name ">
+        <div class="hide pokemonName">Pokemon Name</div>
+        <div class="hide imageContainer"></div>
+      </div>
       <div class="statsContainer">
         <div class="hide abilities">
           <h3>Abilities:</h3>
@@ -37,17 +50,77 @@
       </div>
     </div>
     <div class="pokemonSearch">
-      <input type="text" name="" value="" id="pokemonSearch" size="16">
+      <input type="text" name="" value="" id="pokemonSearch" placeholder="Pokemon Name" size="16">
     </div>
-    <button class="pokemonSearchBtn" type="submit" value="submit">Find</button>
-    <button class="top-btn"> &#9650;</button>
-    <button class="bot-btn">&#9660;</button>
-    <button class="left-btn">&#9664;</button>
-    <button class="right-btn">&#9654;</button>
+    <button class="pokemonSearchBtn" type="submit" value="submit">Locate</button>
+    <button class="top-btn btn"> &#9650;</button>
+    <button class="bot-btn btn">&#9660;</button>
+    <div class="div-ver-btn"></div>
+    <div class="div-hor-btn"></div>
+    <button class="left-btn btn">&#9664;</button>
+    <button class="right-btn btn">&#9654;</button>
     <div class="pokemonContainer"></div>
-    <!-- <div id="pokemonInfo"></div> -->
+
+
+
+    <!-- top 3 circles -->
+    <div class="top-little-circles">
+      <div>
+        <svg class="little-circle red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
+        </svg></i>
+      </div>
+      <div>
+        <svg class="little-circle yellow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
+        </svg></i>
+      </div>
+      <div>
+        <svg class="little-circle green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
+        </svg></i>
+      </div>
+    </div>
+
+    <!-- bottom-left circle -->
+    <div>
+      <svg id="bottom-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
+      </svg></i>
+    </div>
+    <!-- bottom red scren dot -->
+    <div>
+      <svg id="screen-big-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
+      </svg></i>
+    </div>
+
+    <!-- bottom screen lines -->
+    <div><svg id="screen-lines" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path
+          d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+      </svg></div>
+
+    <div class="top-screen-circles">
+      <div>
+        <svg class="top-screen-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
+        </svg></i>
+      </div>
+      <div>
+        <svg class="top-screen-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
+        </svg></i>
+      </div>
+    </div>
+
   </div>
-  <div class="right-panel"></div>
+
+  <div class="right-panel">
+    <div><img class="selfie" src="./images/ashe-selfie.jpg" alt=""></div>
+    <div><img class="badges" src="./images/badges.png" alt=""></div>
+
+  </div>
 
   <script type="module" src="/main.js"></script>
 </body>
