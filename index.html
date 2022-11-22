@@ -13,9 +13,37 @@
 </head>
 
 <body>
-  
-  <div class="container">
-<!-- <class class="anotherContainer"></class> -->
+  <div class="hide container-initial">
+    <div class="top-circles">
+      <svg id="top-circle-initial" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
+      </svg></i>
+      <div class="top-little-circles-initial">
+        <div>
+          <svg class="little-circle red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
+          </svg></i>
+        </div>
+        <div>
+          <svg class="little-circle yellow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
+          </svg></i>
+        </div>
+        <div>
+          <svg class="little-circle green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
+          </svg></i>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="initial-poketitle">Pokedex</div> -->
+    <div class="pokesection">
+      <div class="poketitle-initial">Ashe's <br>Pokedex</div>
+      <button class="open-button">&#9654;</button>
+    </div>
+  </div>
+  <div class="container opened">
+    <!-- <class class="anotherContainer"></class> -->
     <!-- big-blue and gray circle -->
     <svg id="top-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
@@ -53,12 +81,12 @@
       <input type="text" name="" value="" id="pokemonSearch" placeholder="Pokemon Name" size="16">
     </div>
     <button class="pokemonSearchBtn" type="submit" value="submit">Locate</button>
-    <button class="top-btn btn"> &#9650;</button>
-    <button class="bot-btn btn">&#9660;</button>
+    <button disabled="true" class="top-btn btn"> &#9650;</button>
+    <button disabled="true" class="bot-btn btn">&#9660;</button>
     <div class="div-ver-btn"></div>
     <div class="div-hor-btn"></div>
-    <button class="left-btn btn">&#9664;</button>
-    <button class="right-btn btn">&#9654;</button>
+    <button disabled="true" class="left-btn btn">&#9664;</button>
+    <button disabled="true" class="right-btn btn">&#9654;</button>
     <div class="pokemonContainer"></div>
 
 
@@ -116,10 +144,10 @@
 
   </div>
 
-  <div class="right-panel">
+  <div class=" right-panel">
     <div><img class="selfie" src="./images/ashe-selfie.jpg" alt=""></div>
+    <div><button class="close-button">&#9664;</button></div>
     <div><img class="badges" src="./images/badges.png" alt=""></div>
-
   </div>
 
   <script type="module" src="/main.js"></script>

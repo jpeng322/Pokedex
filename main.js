@@ -32,7 +32,6 @@ async function fetchPokemon(name) {
     // pokePic.src 
     // imageContainer.textContent = "NONONO"
     pokePic.src = "./images/psyduck.jpg"
-    return
   }
 }
 
@@ -311,8 +310,25 @@ rightBtn.addEventListener("click", () => {
     counter2 = 0
   }
 })
-
-
+// const initialContainer = document.querySelector(".initial.container")
+const initialContainer = document.querySelector(".container-initial")
+const containerOpened = document.querySelector(".container.opened")
+const rightPanel = document.querySelector(".right-panel")
+const openButton = document.querySelector(".open-button")
+const closeButton = document.querySelector(".close-button")
+openButton.addEventListener("click", () => {
+  // const 
+  initialContainer.classList.add("hide")
+  containerOpened.classList.remove("hide")
+  rightPanel.classList.remove("hide")
+})
 
 // const imageContainer = document.querySelector(".imageContainer");
 // imageContainer.append(pokePic);
+
+closeButton.addEventListener("click", () => {
+  // const 
+  initialContainer.classList.remove("hide")
+  containerOpened.classList.add("hide")
+  rightPanel.classList.add("hide")
+})
