@@ -243,8 +243,8 @@ body {
 
 .statsContainer {
   /* border: 1px solid red; */
-  gap: .5rem;
-  width: 100%;
+  gap: .2rem;
+  width: 120%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -254,9 +254,64 @@ body {
 
 .statsContainer>* {
   /* border: 1px solid black; */
-  flex-grow: 1;
+  /* flex-grow: 1; */
 
 }
+
+.statsContainer h3 {
+  /* border: 1px solid black; */
+  /* flex-grow: 1; */
+margin-bottom: .2rem;
+}
+
+.ability-section,
+.physical-section,
+.types-section {
+  display: flex;
+  /* border: 1px solid red; */
+  /* justify-content: center; */
+}
+.ability-section>*,.physical-section>* {
+  border: 1px solid black;
+  background-color: rgb(76, 195, 124);
+  font-weight: 600;
+  width: 100px;
+  border-radius: 8px;
+  /* flex: auto; */
+  text-align: center;
+  margin: 0px .5rem;
+  /* padding: .1rem; */
+  /* gap: 5px; */
+  padding: 5px 5px;
+
+}
+
+.types-section>*{
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 0px .5rem;
+  padding: 2px 5px;
+  font-size: .8rem;
+  width: 80px;
+  text-align: center;
+  padding: 3px 3px;
+  background-color: rgb(76, 195, 124);
+  font-weight: 600;
+}
+.types-container {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+}
+
+/* .ability-section>*,.physical-section>*,.types-section>* {
+  border: 1px solid black;
+  border-radius: 8px;
+  text-align: center;
+  margin: 0px .5rem;
+  padding: 2px 5px;
+} */
+
 
 
 .pokemonSearch {
@@ -284,9 +339,15 @@ input {
   border-radius: .5rem;
   /* position: relative;
  bottom: 40px; */
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
 }
 
+.pokemonSearchBtn svg {
+  /* border: 1px solid black; */
+  width: 35%;
+  fill: black;
+  /* color: #292c32; */;
+}
 .top-btn,
 .bot-btn,
 .left-btn,
@@ -313,10 +374,22 @@ input {
   background-color: #44494f;
 }
 
+.top-btn:active,
+.bot-btn:active,
+.left-btn:active,
+.right-btn:active {
+  background-color: #51575d ;
+}
+
 .open-button:hover,
 .close-button:hover {
   background-color: rgb(224, 220, 220);
   transition: .2s;
+  cursor: pointer;
+}
+
+.pokemonSearchBtn:hover{
+  background-color: rgb(83, 180, 122);
   cursor: pointer;
 }
 
@@ -325,11 +398,18 @@ input {
 .left-btn:active,
 .right-btn:active,
 .open-button:active,
-.close-button:active {
+.close-button:active,
+.pokemonSearchBtn:active {
   transform: scale(0.98);
   /* Scaling button to 0.98 to its original size */
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   /* Lowering the shadow */
+}
+
+
+
+.pokemonSearchBtn:active{
+  background-color: rgb(76, 195, 124)
 }
 
 .div-ver-btn {
@@ -386,29 +466,6 @@ input {
   z-index: 1;
 }
 
-.ability-section,
-.physical-section,
-.types-section {
-  display: flex;
-}
-
-.ability-section>* {
-  border: 1px solid black;
-  flex: auto;
-  text-align: center;
-}
-
-.physical-section>* {
-  border: 1px solid black;
-  flex: auto;
-  text-align: center;
-}
-
-.types-section>* {
-  border: 1px solid black;
-  flex: auto;
-  text-align: center;
-}
 
 .hide {
   display: none
