@@ -11,7 +11,7 @@
 }
 
 html {
-  max-width: 8000px;
+  /* max-width: 8000px; */
 }
 
 body {
@@ -20,6 +20,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #E5D9B6;
 }
 
 .top-circles {
@@ -73,7 +74,7 @@ body {
 .poketitle-initial {
   font-family: pokemonFont;
   /* border: 1px solid black; */
-  font-size: 4rem;
+  font-size: 5rem;
   text-align: center;
   grid-column: 1/13;
   grid-row: 3/4;
@@ -182,8 +183,6 @@ body {
   grid-column: 1/13;
   grid-row: 3/4;
   margin-bottom: 1rem;
-  position: relative;
-  /* right: 30px; */
 
 }
 
@@ -193,12 +192,9 @@ body {
 }
 
 .displayContainer {
-  /* box-sizing: content-box; */
   position: relative;
   border: 32px solid #cfcccc;
   background-color: white;
-  /* width: 400px;
-  height: 300px; */
   grid-column: 3/11;
   grid-row: 4/9;
   display: flex;
@@ -207,7 +203,6 @@ body {
   align-items: center;
   border-radius: 1rem;
   padding: 0rem 2rem 1rem 2rem;
-  /* margin: 1rem; */
   right: 10px;
 }
 
@@ -217,8 +212,6 @@ body {
 
 
 .pokemonName {
-  /* border: 1px solid black; */
-  /* margin-top: 1rem; */
   font-family: pokemonFont, sans-serif;
   font-size: 2.5rem;
   position: relative;
@@ -228,7 +221,6 @@ body {
 
 
 .imageContainer img {
-  /* border: 1px solid red; */
   height: 120px;
   width: 120px;
   position: relative;
@@ -236,6 +228,7 @@ body {
 }
 
 .imageContainer.full img {
+  border: 1px solid black;
   width: 230px;
   height: auto;
 }
@@ -475,7 +468,7 @@ input {
 
 #top-circle {
   position: relative;
-  top: 50px;
+  top: 30px;
   left: 60px;
   border: 6px solid rgb(195, 194, 194);
   fill: rgb(59, 32, 238);
@@ -499,7 +492,7 @@ input {
   display: flex;
   /* width: 400px; */
   gap: 10px;
-  top: 60px;
+  top: 40px;
   left: 40px;
 }
 

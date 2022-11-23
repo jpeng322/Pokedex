@@ -302,7 +302,6 @@ function myFunction(x) {
   const containerOpened = document.querySelector(".container.opened")
   const rightPanel = document.querySelector(".right-panel")
   const openButton = document.querySelector(".open-button")
-  const closeButton = document.querySelector(".close-button")
   if (x.matches) { // If media query matches
     initialContainer.classList.remove("hide")
     containerOpened.classList.add("hide")
