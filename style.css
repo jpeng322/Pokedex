@@ -138,6 +138,7 @@ body {
   transition: .5s;
 }
 
+/* .right-panel>*{border: 1px solid black;} */
 
 
 .selfie {
@@ -147,7 +148,8 @@ body {
   padding: 10px;
   background-color: black;
   border-radius: 10px;
-  margin-bottom: -50px;
+  position: relative;
+  top: 50px;
 
 }
 
@@ -170,7 +172,6 @@ body {
 
 .badges {
   width: 200px;
-  /* border: 1px solid black; */
 }
 
 .poketitle {
@@ -564,3 +565,4 @@ input {
   display: flex;
   justify-content: center;
 }
+

@@ -295,3 +295,29 @@ document.addEventListener('keydown', async (e) => {
 //   console.log(e)
 //   }
 // )
+
+
+function myFunction(x) {
+  const initialContainer = document.querySelector(".container-initial")
+  const containerOpened = document.querySelector(".container.opened")
+  const rightPanel = document.querySelector(".right-panel")
+  const openButton = document.querySelector(".open-button")
+  const closeButton = document.querySelector(".close-button")
+  if (x.matches) { // If media query matches
+    initialContainer.classList.remove("hide")
+    containerOpened.classList.add("hide")
+    rightPanel.classList.add("hide")
+    openButton.disabled = true
+
+  } else {
+    initialContainer.classList.add("hide")
+    containerOpened.classList.remove("hide")
+    rightPanel.classList.remove("hide")
+    openButton.disabled = false
+  }
+}
+
+var x = window.matchMedia("(max-width: 1200px)")
+
+myFunction(x)
+x.addListener(myFunction)
