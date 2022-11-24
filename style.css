@@ -228,7 +228,7 @@ body {
 }
 
 .imageContainer.full img {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 230px;
   height: auto;
 }

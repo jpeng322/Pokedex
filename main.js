@@ -21,29 +21,22 @@ async function fetchPokemon(name) {
     }
   } catch (error) {
     console.log(error)
-    // const imageContainer = document.querySelector(".imageContainer")
-    // const pokePic = document.createElement("img")
-    // const displayContainer = document.querySelector(".displayContainer")
-    // displayContainer.classList.remove("default")
-    // imageContainer.classList.remove("hide");
-    // pokePic.src = "./images/psyduck.jpg"
   }
 }
 
+
+
+const pokemonName = document.querySelector(".pokemonName")
+
+const pokeSearchBar = document.querySelector("#pokemonSearch");
+
+const imageContainer = document.querySelector(".imageContainer")
+
+const pokePic = document.createElement("img")
+imageContainer.append(pokePic);
+
 async function displayPokemon() {
-  const pokeContainer = document.querySelector(".container")
-
-  const pokemonName = document.querySelector(".pokemonName")
-
-  const pokeSearchBar = document.querySelector("#pokemonSearch");
-
-
-  const imageContainer = document.querySelector(".imageContainer")
-
-  const pokePic = document.createElement("img")
-
   if (pokeSearchBar.value.toLowerCase() !== "") {
-    imageContainer.append(pokePic);
     const pokeData = await fetchPokemon(pokeSearchBar.value.toLowerCase());
     if (pokeData !== undefined) {
       imageContainer.classList.remove("full")
