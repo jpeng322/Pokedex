@@ -136,7 +136,7 @@ async function displayPokemon() {
       const physicalContainer = document.querySelector(".physicalTraits")
       physicalContainer.classList.add("hide");
       imageContainer.classList.add("full")
-      pokemonName.textContent = "Err"
+      pokemonName.textContent = ""
       pokePic.src = "/assets/error_page.c96881f1.png"
       // pokePic.width = "300px"
 
