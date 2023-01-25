@@ -33,7 +33,7 @@ const pokeSearchBar = document.querySelector("#pokemonSearch");
 const imageContainer = document.querySelector(".imageContainer")
 
 const pokePic = document.createElement("img")
-imageContainer.append(pokePic);
+
 
 async function displayPokemon() {
   if (pokeSearchBar.value.toLowerCase() !== "") {
@@ -142,6 +142,7 @@ async function displayPokemon() {
 
     }
   }
+  imageContainer.append(pokePic);
 }
 
 
