@@ -137,7 +137,7 @@ async function displayPokemon() {
       physicalContainer.classList.add("hide");
       imageContainer.classList.add("full")
       pokemonName.textContent = ""
-      pokePic.src = "./images/error_page.png"
+      pokePic.src = "../images/error_page.png"
       // pokePic.width = "300px"
 
     }
